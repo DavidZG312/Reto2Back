@@ -71,7 +71,7 @@ public class UserService {
         Optional<Users> usuario = userRepository.autenticarUsuario(email, password);
 
         if (usuario.isEmpty()) {
-            return new Users(null, email, password, null, null, null, null, null, null);
+            return new Users(null, null, null, null, null, null, null, null, null);
         } else {
             return usuario.get();
         }
